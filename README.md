@@ -17,9 +17,9 @@ A tool to change the Traditional Chinese text to Simple Chinese in Date A Live V
 
 使用steam上的PC版凛绪轮回测试总结而得，不一定完全准确，还请以实际情况为准。
 
-## DAL剧本文本繁体转简体脚本
+## DALRR剧本文本繁体转简体脚本
 
-[DALRR_tc2sc.py](https://github.com/Wanlau/dal_tc2sc/blob/master/DALRR_tc2sc.py)
+[DALRR_tc2sc.py](https://github.com/Wanlau/dal_tc2sc/blob/main/DALRR_tc2sc.py)
 
 用于处理Script.pck。
 
@@ -32,3 +32,27 @@ A tool to change the Traditional Chinese text to Simple Chinese in Date A Live V
 对于某些字体无简繁之分，但简体区与繁体区习惯用字不同的，OpenCC不会对其进行转换。（比如“看着”“听着”在繁体版里会写成“看著”“听著”。）
 
 对于某些字，因所用字体无法显示，故额外对其进行转换。（如“妳”转“你”等）（可能不全）
+
+## DALRD剧本文本繁体转简体脚本
+
+[DALRD_tc2sc](https://github.com/Wanlau/dal_tc2sc/blob/main/DALRD_tc2sc.py)
+
+需要配合[DALTools](https://github.com/thesupersonic16/DALTools)中的ScriptDialogueEditor的批量导入、导出功能使用。
+
+能够自动识别导出的.tsv文件并将其中『翻译文本』部分转换为简体后生成新的.tsv文件。
+
+需要先装好python3以及所需的库（如OpenCC等）。
+
+不会对错误进行处理，需要手动确保路径、权限等没问题。
+
+对于某些字体无简繁之分，但简体区与繁体区习惯用字不同的，OpenCC不会对其进行转换。（比如“看着”“听着”在繁体版里会写成“看著”“听著”。）
+
+## DALRR语音-文字提取脚本
+
+[DALRR_findVT.py](https://github.com/Wanlau/dal_tc2sc/blob/main/DALRR_findVT.py)
+
+从Script.pck中提取『语音标识-文本』信息，可用于训练TTS模型。
+
+需要把它和编译好的[DALTools](https://github.com/thesupersonic16/DALTools)一同放在游戏主程序（DATE A LIVE RIO-REINCARNATION.exe）所在的位置。
+
+将会在所在位置生成一个.tsv文件。
