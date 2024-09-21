@@ -56,3 +56,28 @@ A tool to change the Traditional Chinese text to Simple Chinese in Date A Live V
 需要把它和编译好的[DALTools](https://github.com/thesupersonic16/DALTools)一同放在游戏主程序（DATE A LIVE RIO-REINCARNATION.exe）所在的位置。
 
 将会在所在位置生成一个.tsv文件。
+
+## DAL字体文件工具
+
+[DAL_FONTTool.py](https://github.com/Wanlau/dal_tc2sc/blob/main/DAL_FONTTool.py)
+
+用于修改字体文件的工具，可修改其中的.code文件。
+
+.code文件的具体内容详见[字体文件相关说明](docs/fontcode.md)。
+
+以下指令可输入一个code文件并在其所在目录中生成一个同名tsv文件：
+
+```python DAL_FONTTool.py -c font.code```
+
+以下指令可输入一个tsv文件并在其所在目录中生成一个同名code文件：
+
+```python DAL_FONTTool.py -t font.tsv```
+
+其他指令如下：
+```
+-h  帮助
+-c  输入一个code文件并将其转换为一个tsv文件
+-t  输入一个tsv文件并将其转换为一个code文件
+-cb 输入一个目录，将其中的code文件转换为tsv文件
+-tb 输入一个目录，将其中的tsv文件转换为code文件
+```
